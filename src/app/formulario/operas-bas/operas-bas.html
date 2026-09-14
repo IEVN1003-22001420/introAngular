@@ -1,0 +1,31 @@
+<!-- <p>operas-bas works!</p> -->
+ <div class="col-6">
+    <div class="mb-3">
+        <form action="">
+            <div class="form-group pt-4">
+                <label for="num1" class="form-label">Numero1: </label>
+                <input [(ngModel)]="num1" type="text" name="num1" class="form-control" id="num1" placeholder="Ingresar numero 1">
+            </div>
+            <div class="form-group pt-4">
+                <label for="num2" class="form-label">Numero2: </label>
+                <input [(ngModel)]="num2" type="text" name="num2" class="form-control" id="num2" placeholder="Ingresar numero 2">
+            </div>
+            <div class="form-group pt-4">
+                <label for="sumar" class="form-label"><input [(ngModel)]="operacion" class="m-1" type="radio" name="operacion" id="sumar" value="sumar">Sumar</label>
+                <label for="restar" class="form-label"><input [(ngModel)]="operacion" class="m-1" type="radio" name="operacion" id="restar" value="restar">Restar</label>
+                <label for="multiplicar" class="form-label"><input [(ngModel)]="operacion" class="m-1" type="radio" name="operacion" id="multiplicar" value="multiplicar">Multiplicar</label>
+                <label for="dividir" class="form-label"><input [(ngModel)]="operacion" class="m-1" type="radio" name="operacion" id="dividir" value="dividir">Dividir</label>
+            </div>
+            <br/>
+            <!-- <button (click)="sumar()" type="button" class="btn btn-primary m-1">Sumar</button>
+            <button (click)="restar()" type="button" class="btn btn-primary m-1">Restar</button>
+            <button (click)="multiplicar()" type="button" class="btn btn-primary m-1">Multiplicar</button>
+            <button (click)="dividir()" type="button" class="btn btn-primary m-1">Dividir</button>  -->
+            <button (click)="calcular()" type="button" class="btn btn-primary">Calcular</button>
+
+        </form>
+    </div>
+ </div>
+ <div class="col-6">
+    <h2>Resultado: {{resultado}} </h2>
+ </div>

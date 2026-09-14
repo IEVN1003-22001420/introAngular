@@ -1,0 +1,41 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-operas-bas',
+  standalone: false,
+  styleUrl: './operas-bas.css',
+  templateUrl: './operas-bas.html',
+})
+export class OperasBas {
+  num1:string=''
+  num2:string=''
+  operacion:string=''
+  resultado:number=0
+
+  sumar():void{
+    this.resultado=parseInt(this.num1)+parseInt(this.num2)
+  }
+  restar():void{
+    this.resultado=parseInt(this.num1)-parseInt(this.num2)
+  }
+  multiplicar():void{
+    this.resultado=parseInt(this.num1)*parseInt(this.num2)
+  }
+  dividir():void{
+    this.resultado=parseInt(this.num1)/parseInt(this.num2)
+  }
+  calcular():void{
+    if (this.operacion=='sumar') {
+      this.sumar();
+    }
+    if (this.operacion=='restar') {
+      this.restar();
+    }
+    if(this.operacion=='multiplicar'){
+      this.multiplicar();
+    }
+    if(this.operacion=='dividir'){
+      this.dividir();
+    }
+  }
+}
